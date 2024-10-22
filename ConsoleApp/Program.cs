@@ -191,7 +191,7 @@ namespace ConsoleApp
         {
             var players = game.Players;
             var turns = gameTurnRepository.GetLastTurns(game.Id, 5);
-
+            
             foreach (var turn in turns)
             {
                 Console.WriteLine($"{players[0].Name}: {turn.PlayerDecisions[players[0].UserId.ToString()]}");
